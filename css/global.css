@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+:root {
+  --primary: rgb(241, 241, 241);
+  --secondary: #a8a8a8;
+  --dark: rgb(15, 15, 15);
+  --fate: rgb(48, 48, 48);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-image: url(/imges/website\ tasin\ main\ copy.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1700px;
+  margin: 0 auto;
+}
+
+.container .logo {
+  display: grid;
+  place-items: center;
+  margin-top: 3rem;
+  animation: downup 1s;
+  transition: all 1s ease-in-out;
+}
+
+@keyframes downup {
+  0% {
+    opacity: 0;
+    transform: translateY(-200%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo img {
+  height: auto;
+  width: 4rem;
+}

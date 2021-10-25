@@ -1,0 +1,21 @@
+.container main .navbar ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+}
+
+.container main .navbar ul li {
+  padding: 1.5rem 0;
+}
+
+.container main .navbar ul li a {
+  color: var(--secondary);
+  font-size: 1.7rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.container main .navbar ul li a:hover {
+  padding-left: 1.5rem;
+  color: var(--primary);
+}

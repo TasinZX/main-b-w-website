@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+:root {
+  --primary: rgb(241, 241, 241);
+  --secondary: #a8a8a8;
+  --dark: rgb(15, 15, 15);
+  --fate: rgb(48, 48, 48);
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+body {
+  background-image: url(/imges/website\ tasin\ main\ copy.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.container .logo {
+  display: grid;
+  place-items: center;
+  margin-top: 3rem;
+  animation: downup 1s;
+  transition: all 1s ease-in-out;
+}
+
+@keyframes downup {
+  0% {
+    opacity: 0;
+    transform: translateY(-200%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo img {
+  height: auto;
+  width: 4rem;
+}
+
+.container .home-container .home a {
+  color: var(--primary);
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .home-container .home a > h1 {
+  margin-right: 5rem;
+  transition: all 0.5s ease-in-out;
+}
+.container .home-container .home a .move {
+  animation: iconmove 1.3s infinite;
+  transition: all 0.5s ease-in-out;
+  margin-left: -2rem;
+  margin-right: 1.5rem;
+}
+
+@keyframes iconmove {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(1rem);
+    opacity: 1;
+  }
+}
+
+.container .home-container {
+  display: grid;
+  place-items: center;
+  height: 80vh;
+}
+
+.container .home-container .home {
+  border: 0.7rem solid var(--primary);
+  outline: none;
+  padding: 1rem 1.7rem;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+  animation: updown 1.3s;
+}
+
+@keyframes updown {
+  0% {
+    margin-top: 100rem;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0rem;
+    opacity: 1;
+  }
+}
+
+.container .home-container .home:hover {
+  background: var(--primary);
+}
+.container .home-container .home:hover > * {
+  color: var(--dark);
+}
