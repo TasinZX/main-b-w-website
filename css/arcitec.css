@@ -67,6 +67,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem 1.7rem;
 }
 
 .container .home-container .home a > h1 {
@@ -100,10 +101,29 @@ a {
 .container .home-container .home {
   border: 0.7rem solid var(--primary);
   outline: none;
-  padding: 1rem 1.7rem;
   background: transparent;
   transition: all 0.3s ease-in-out;
   animation: updown 1.3s;
+  position: relative;
+  cursor: pointer;
+}
+
+.container .home-container .home::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary);
+  transition: transform 0.4s ease-in-out;
+  transform: scaleX(0);
+  z-index: -1;
+  cursor: pointer;
+}
+
+.container .home-container .home:hover::after {
+  transform: scaleX(1);
 }
 
 @keyframes updown {
@@ -117,9 +137,6 @@ a {
   }
 }
 
-.container .home-container .home:hover {
-  background: var(--primary);
-}
 .container .home-container .home:hover > * {
   color: var(--dark);
 }
