@@ -18,6 +18,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 body {
   background-image: url(/imges/website\ tasin\ main\ copy.jpg);
@@ -34,6 +35,12 @@ a {
 .container {
   max-width: 1600px;
   margin: 0 auto;
+}
+/* logo  */
+
+.logo img {
+  height: auto;
+  width: 4rem;
 }
 
 .container .logo {
@@ -55,7 +62,27 @@ a {
   }
 }
 
-.logo img {
-  height: auto;
-  width: 4rem;
+/* left navbar utilites */
+
+.container main .navbar ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+}
+
+.container main .navbar ul li {
+  padding: 1.5rem 0;
+  list-style-type: none;
+}
+
+.container main .navbar ul li a {
+  color: var(--secondary);
+  font-size: 1.7rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.container main .navbar ul li a:hover {
+  padding-left: 1.5rem;
+  color: var(--primary);
 }

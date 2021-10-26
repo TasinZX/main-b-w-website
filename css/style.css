@@ -90,7 +90,7 @@ html {
   padding: 0.5rem 1.7rem;
   margin-top: 2rem;
   transition: all 0.3s ease-in-out;
-  animation: down-to-top 3s;
+  animation: down-to-top 2.8s;
   position: relative;
   cursor: pointer;
 }
@@ -202,3 +202,5 @@ html {
 ==============
 ==============
  */
+
+

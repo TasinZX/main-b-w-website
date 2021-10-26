@@ -1,0 +1,23 @@
+@import url(/css/global.css);
+.container main {
+  display: grid;
+  align-items: center;
+  justify-items: space-between;
+  grid-template-columns: 1fr 1fr;
+  color: var(--primary);
+  animation: zero-one 1.5s;
+}
+
+.container main .about-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0));
+  padding: 2rem;
+}
+
+@keyframes zero-one {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
